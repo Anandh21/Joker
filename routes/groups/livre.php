@@ -12,6 +12,10 @@ Route::prefix('/livres')->group(function (){
     Route::get('/add',[LivreController::class, 'showAddLivreForm'])->name('showAddLivreForm');
     Route::post('/add',[LivreController::class, 'addLivre'])->name('addLivre');
 
+    Route::get('/{livre:id}',[LivreController::class, 'showUpdateLivreForm'])->name('showUpdateLivreForm');
+    Route::patch('/{livre:id}',[LivreController::class, 'updateLivre'])->name('updateLivre');
+
+
 
 
 

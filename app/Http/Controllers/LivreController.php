@@ -45,4 +45,24 @@ class LivreController extends Controller
 
         return redirect('/livres')->with('success', 'Un livre a été ajoutée!!!');
     }
+    public function showUpdateLivreForm( Livre $livre)
+    {
+        return view('livres.updateLivre', ['livre'=>$livre]);
+    }
+
+    /**
+     * @param Request $request
+     * @param Livre $livre
+     * @return Application|RedirectResponse|Redirector
+     */
+    public function updateLivre( Request $request, livre $livre)
+    {
+        $livre->title = $request->title;
+        $livre->description = $request->description;
+        $livre->author = $request->author;
+        $livre->save();
+
+        return redirect('/livres')->with('warning', 'Le livre a été mis à jour!!!');
+    }
+
 }

@@ -22,7 +22,7 @@
                 <td>{{$livre->title}}</td>
                 <td>{{$livre->description}}</td>
                 <td>{{$livre->author}}</td>
-                <td><a href="" class="btn btn-warning">Update</a></td>
+                <td><a href="{{ route('showUpdateLivreForm',$livre->id ) }}" class="btn btn-warning">Update</a></td>
                 <td>
                     <form action="" method="post">
                         @csrf
