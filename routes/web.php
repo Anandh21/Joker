@@ -17,3 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 require 'groups/livre.php';
+require 'groups/auth.php';

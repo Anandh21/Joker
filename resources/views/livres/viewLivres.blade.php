@@ -2,6 +2,10 @@
 @section('content')
     @include('components.flash')
 
+    @auth
+    <strong>Je suis connecté</strong>
+    @endauth
+
     <table class="table">
         <thead>
         <tr>

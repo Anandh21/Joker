@@ -34,6 +34,7 @@
         <div class="col-sm-2 ">
             <a href=" {{ route('showAddLivreForm') }}">Add Livre</a>
         </div>
+
         <div class="col-1 offset-3">
 
         </div>
