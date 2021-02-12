@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Livre;
+use App\Models\Todo;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -63,6 +64,12 @@ class LivreController extends Controller
         $livre->save();
 
         return redirect('/livres')->with('warning', 'Le livre a été mis à jour!!!');
+    }
+
+    public function deleteLivre(Livre $livre)
+    {
+        $livre->delete();
+        return back()->with('error', 'Le livre a été supprimé');
     }
 
 }

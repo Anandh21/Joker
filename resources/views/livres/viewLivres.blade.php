@@ -24,7 +24,7 @@
                 <td>{{$livre->author}}</td>
                 <td><a href="{{ route('showUpdateLivreForm',$livre->id ) }}" class="btn btn-warning">Update</a></td>
                 <td>
-                    <form action="" method="post">
+                    <form action="{{ route('deleteLivre', $livre->id) }}" method="post">
                         @csrf
                         @method('delete')
                         <button type="submit" class="btn btn-danger">Delete</button>

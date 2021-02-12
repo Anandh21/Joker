@@ -15,6 +15,8 @@ Route::prefix('/livres')->group(function (){
     Route::get('/{livre:id}',[LivreController::class, 'showUpdateLivreForm'])->name('showUpdateLivreForm');
     Route::patch('/{livre:id}',[LivreController::class, 'updateLivre'])->name('updateLivre');
 
+    Route::delete('/{livre:id}',[LivreController::class, 'deleteLivre'])->name('deleteLivre');
+
 
 
 
